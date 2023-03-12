@@ -2,11 +2,11 @@
 import axiosService from "./baseRequest"
 
 /* 获取书籍列表 */
-export function getByRequest(data: {}) {
+export function getByRequest(params: {}) {
     return axiosService.request({
         url: 'book/getByRequest',
-        method: 'post',
-        data: data
+        method: 'get',
+        params: params
     })
 }
 
