@@ -1,19 +1,15 @@
 <template>
-    <el-menu default-active="1" class="el-menu-vertical-demo">
-        <RouterLink to="/">
-            <el-menu-item index="1">
-                <el-icon><icon-menu /></el-icon>
-                <span>首页</span>
-            </el-menu-item>
-        </RouterLink>
-        <RouterLink to="/bookList">
-            <el-menu-item index="2">
-                <el-icon>
-                    <document />
-                </el-icon>
-                <span>书籍管理</span>
-            </el-menu-item>
-        </RouterLink>
+    <el-menu default-active="1" class="el-menu-vertical-demo" router>
+        <el-menu-item index="/">
+            <el-icon><icon-menu /></el-icon>
+            <span>首页</span>
+        </el-menu-item>
+        <el-menu-item index="bookList">
+            <el-icon>
+                <document />
+            </el-icon>
+            <span>书籍管理</span>
+        </el-menu-item>
     </el-menu>
 </template>
 

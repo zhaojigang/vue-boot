@@ -2,7 +2,7 @@ import { useUserStore } from "@/stores/user";
 import { logout } from "@/utils/login";
 import axios from "axios"
 const axiosService = axios.create({
-    baseURL: import.meta.env.VITE_DOMAIN_URL_TM_JOY,
+    baseURL: import.meta.env.VITE_DOMAIN_URL_VUE_BOOT,
     timeout: 1000
 })
 
