@@ -18,5 +18,4 @@ import {
     Document,
     Menu as IconMenu
 } from '@element-plus/icons-vue'
-import { RouterLink } from 'vue-router'
 </script>

@@ -30,18 +30,11 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-import type { Book } from '@/types/book'
+import type { Book, BookRequest } from '@/types/book'
 import { getByRequest, remove } from '@/api/book'
 import { Delete, Edit, Search } from '@element-plus/icons-vue'
 import AddBookDialog from '@/components/book/AddBookDialog.vue';
 import { ElMessage, ElMessageBox } from 'element-plus';
-
-/* 定义查询请求参数接口 */
-interface BookRequest {
-    name: string,
-    pageNum: number,
-    pageSize: number
-}
 
 /* 定义查询请求参数 */
 const queryParams = ref<BookRequest>({
@@ -83,7 +76,6 @@ function handleCurrentChange(pageNum: number) {
     getBooks()
 }
 
-
 const addBookDialogVisble = ref<Boolean>(false)
 const bookValue = ref<Book>()
 function addOrUpdateBook(book: Book | undefined) {
@@ -114,7 +106,7 @@ function openDeleteMessageBox(id: number) {
 }
 
 async function deleteBook(id: number) {
-    await remove({ bookId: id }).then(resp => { })
+    await remove({ bookId: id })
     getBooks()
 }
 </script>
